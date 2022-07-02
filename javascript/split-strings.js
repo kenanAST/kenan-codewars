@@ -1,5 +1,10 @@
 testValue = 'abcdefg'
 
+//Top Solution
+const top_solution_splitString = (str) => {
+    return (s+"_").match(/.{2}/g)||[]
+}
+
 const splitString = (str) => {
     let value = []
     let temp = '';
