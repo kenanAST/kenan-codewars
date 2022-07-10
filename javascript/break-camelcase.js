@@ -5,6 +5,17 @@ const regexBreakCamelCase = (string) => {
 	return string.replace(/([A-Z])/g, ' $1');
 };
 
+//Person 2nd
+const personalBreakCamelCase = (string) => {
+	return string
+		.split('')
+		.map((element) => {
+			return element.toUpperCase() === element ? ' ' + element : element;
+		})
+		.join('');
+};
+
+//Personal 1st
 const breakCamelCase = (string) => {
 	let breaked = '';
 	for (let i = 0; i < string.length; i++) {
@@ -14,3 +25,5 @@ const breakCamelCase = (string) => {
 	}
 	return breaked;
 };
+
+console.log(personalBreakCamelCase(testValue));
